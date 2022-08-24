@@ -1,0 +1,243 @@
+body {
+	font-size: 16px;
+	color: #44220D;
+	background-color: #E2CBB6;
+	font-family: 'Caveat', cursive;
+}
+
+/** HEADER **/
+#header-nav {
+	background-color: #44220D;
+	border-radius: 0;
+	border: 0;
+}
+
+#logo-img {
+	background: url('../images/symbol-150.jpeg') no-repeat;
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px 10px 0px;
+	opacity: 0.9;
+}
+
+.navbar-brand {
+	padding-top: 15px;
+	padding-left: 30px;
+}
+
+.navbar-brand h1 {
+	font-family: 'Sacramento', cursive;
+	color: #E2CBB6;
+	font-size: 2.5em;
+	text-shadow: 1px 1px 1px #e7e2de;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none!important;
+}
+
+.navbar-brand h1:hover, .navbar-brand h1:focus {
+	text-decoration: none!important;
+}
+
+.navbar-brand p{
+	font-family: 'Sacramento', cursive;
+	color: #E2CBB6;
+	margin-top: 10px;
+	font-size: 1.5em;
+  opacity: 0.85;
+}
+
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+
+#nav-list {
+	margin-top: 10px;
+}
+
+#nav-list a {
+	color: #E2CBB6;
+	text-align: center;
+}
+
+#nav-list a:hover {
+	text-decoration: underline;
+	text-shadow: 0.5px 0.5px 0.5px #e7e2de;
+}
+
+#nav-list a span {
+	font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #E2CBB6;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+/** END HEADER **/
+
+/** HOMEPAGE **/
+
+.container .jumbotron {
+  box-shadow: 0 0 50px #e7e2de;
+  border: 2px solid #e7e2de;
+}
+
+#services-tile, #contacts-tile, #map-tile {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #44220D;
+  overflow: hidden;
+}
+
+#services-tile:hover, #contacts-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 10px 1px #44220D;
+}
+
+#services-tile {
+  background: url('../images/symbol-250.jpeg') no-repeat;
+  background-position: center;
+}
+#contacts-tile {
+  background: url('../images/symbol-250.jpeg') no-repeat;
+  background-position: center;
+}
+
+#services-tile span, #contacts-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #44220D;
+  color: #fff;
+  opacity: .8;
+}
+
+
+/** END HOMEPAGE **/
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+	.container .jumbotron {
+		background: url('../images/jumbotron-1200.jpeg');
+		height: 950px;
+	}
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    background: url('../images/symbol-100.jpeg') no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+  /* End Header */
+
+  /* Homepage */
+  .container .jumbotron {
+		background: url('../images/jumbotron-1000.jpeg');
+		height: 750px;
+  }
+  /* End Homepage */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+	/*Header */
+	.navbar-brand p { /* parrucchiera di fiducia */
+    font-size: 1em;
+    margin-top: 12px;
+  }
+   .navbar-brand h1 { /* Luigia Parrucchira */
+    font-size: 4vw; /* 1vw = 1% of viewport width */
+  }
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
+
+  .navbar .container {
+  	margin-bottom: 10px;
+  }
+  /* End Header */
+
+
+  /* Homepage */
+  .container .jumbotron {
+		background: url('../images/jumbotron.jpeg');
+		height: 550px;
+  }
+  /* End Homepage */
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Luigia Parrucchira */
+    padding-top: 10px;
+    text-shadow: 0.5px 0.5px 0.5px #e7e2de;
+    font-size: 5.5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-brand p { /* parrucchiera di fiducia */
+    font-size: 0.9em;
+    margin-top: 12px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End Header */
+
+  /* Homepage */
+  .container .jumbotron {
+  	margin-top: 30px;
+  	padding: 0;
+  }
+  /* End Homepage */
+}
+
