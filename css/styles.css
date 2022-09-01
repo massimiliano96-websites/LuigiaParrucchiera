@@ -48,7 +48,7 @@ body {
 	color: #E2CBB6;
 	margin-top: 10px;
 	font-size: 1.5em;
-  opacity: 0.85;
+    opacity: 0.85;
 }
 
 .navbar-brand p span { /* Star-K */
@@ -105,11 +105,11 @@ body {
 }
 
 #services-tile {
-  background: url('../images/symbol-250.jpeg') no-repeat;
+  background: url('../images/services.jpg') no-repeat;
   background-position: center;
 }
 #contacts-tile {
-  background: url('../images/symbol-250.jpeg') no-repeat;
+  background: url('../images/contacts.jpeg') no-repeat;
   background-position: center;
 }
 
@@ -125,17 +125,55 @@ body {
   color: #fff;
   opacity: .8;
 }
-
-
 /** END HOMEPAGE **/
 
+/** SERVICES PAGE **/
+#background-text {
+    font-family: 'Sacramento', cursive;
+    color: #44220D;
+    font-size: 10em;
+    opacity: 0.25;
+}
+
+/** END SERVICES PAGE **/
+
+
+/* FOOTER */
+.panel-footer {
+    margin-top: 10px;
+    padding-top: 85px;
+    padding-bottom: 30px;
+    background-color: #44220D;
+    border-top: 0;
+    color: #E2CBB6;
+}
+
+.panel-footer div.row {
+    margin-bottom: 35px;
+}
+
+#hours, #address {
+    line-height:  2;
+    text-align: center;
+}
+
+#hours > span, #address > span {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.container section p {
+    font-family: 'Parisienne', cursive;
+    font-size: 2em;
+}
+/* END FOOTER */
 
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
 	.container .jumbotron {
 		background: url('../images/jumbotron-1200.jpeg');
-		height: 950px;
+		height: 800px;
 	}
 }
 
@@ -153,7 +191,7 @@ body {
   /* Homepage */
   .container .jumbotron {
 		background: url('../images/jumbotron-1000.jpeg');
-		height: 750px;
+		height: 675px;
   }
   /* End Homepage */
 }
@@ -162,7 +200,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
 
 	/*Header */
-	.navbar-brand p { /* parrucchiera di fiducia */
+    .navbar-brand p { /* parrucchiera di fiducia */
     font-size: 1em;
     margin-top: 12px;
   }
@@ -188,6 +226,11 @@ body {
 		background: url('../images/jumbotron.jpeg');
 		height: 550px;
   }
+    #map-tile {
+        width: 600px;
+        margin: 0px auto 15px;
+    }
+
   /* End Homepage */
 }
 
@@ -215,22 +258,6 @@ body {
     font-size: 1em;
     margin-right: 5px;
   }
-
-  #call-btn > a {
-    font-size: 1.5em;
-    display: block;
-    margin: 0 20px;
-    padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
-  }
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
   /* End Header */
 
   /* Homepage */
@@ -238,6 +265,35 @@ body {
   	margin-top: 30px;
   	padding: 0;
   }
+
+  #services-tile, #contacts-tile {
+      width: 450px;
+      margin: 0px auto 15px;
+  }
+
+  #map-tile {
+      width: 600px;
+      margin: 0px auto 15px;
+  }
+
   /* End Homepage */
 }
 
+/********** Super Extra small devices only **********/
+@media (max-width: 500px) {
+    #services-tile, #contacts-tile {
+        width: 250px;
+        margin: 0px auto 15px;
+    }
+
+    .navbar-brand h1 { /* Luigia Parrucchira */
+        padding-top: 10px;
+        text-shadow: 0.5px 0.5px 0.5px #e7e2de;
+        font-size: 7vw; /* 1vw = 1% of viewport width */
+    }
+
+    .navbar-brand p { /* parrucchiera di fiducia */
+        font-size: 0.7em;
+        margin-top: 12px;
+    }
+}
