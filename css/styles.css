@@ -131,8 +131,13 @@ body {
 #background-text {
     font-family: 'Sacramento', cursive;
     color: #44220D;
-    font-size: 10em;
+    font-size: 10vw;
     opacity: 0.25;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 10px;
 }
 
 /** END SERVICES PAGE **/
@@ -146,6 +151,8 @@ body {
     background-color: #44220D;
     border-top: 0;
     color: #E2CBB6;
+    width: 100%;
+    position: relative;
 }
 
 .panel-footer div.row {
