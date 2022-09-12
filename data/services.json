@@ -1,0 +1,81 @@
+[{
+  "id": 1,
+  "short_name": "Sh",
+  "name": "Shampoo Specifico",
+  "special_instructions": ""
+}, {
+  "id": 2,
+  "short_name": "TD",
+  "name": "Taglio Donna",
+  "special_instructions": ""
+},{
+  "id": 2,
+  "short_name": "TU",
+  "name": "Taglio Uomo",
+  "special_instructions": ""
+}, {
+  "id": 3,
+  "short_name": "PG",
+  "name": "Piega",
+  "special_instructions": ""
+}, {
+  "id": 4,
+  "short_name": "M",
+  "name": "Mousse",
+  "special_instructions": ""
+}, {
+  "id": 5,
+  "short_name": "O",
+  "name": "Olio Brillantezza",
+  "special_instructions": ""
+}, {
+  "id": 6,
+  "short_name": "CI",
+  "name": "Crema Impacco",
+  "special_instructions": ""
+}, {
+  "id": 7,
+  "short_name": "L",
+  "name": "Loazione Curativa",
+  "special_instructions": ""
+}, {
+  "id": 8,
+  "short_name": "C",
+  "name": "Colore",
+  "special_instructions": ""
+}, {
+  "id": 9,
+  "short_name": "CN",
+  "name": "Contrasti",
+  "special_instructions": "Balayage, Degrade, Shatush"
+}, {
+  "id": 10,
+  "short_name": "PM",
+  "name": "Permanente",
+  "special_instructions": ""
+}, {
+  "id": 11,
+  "short_name": "PL",
+  "name": "Peeling",
+  "special_instructions": "cute con forfora, sebo, prurito e caduta"
+}, {
+  "id": 12,
+  "short_name": "B",
+  "name": "Botanea",
+  "special_instructions": "colore naturale a base di erbe"
+}, {
+  "id": 13,
+  "short_name": "MN",
+  "name": "Manicure",
+  "special_instructions": ""
+}, {
+  "id": 14,
+  "short_name": "SSP",
+  "name": "Smalto semi permanente",
+  "special_instructions": ""
+}, {
+  "id": 15,
+  "short_name": "SC",
+  "name": "Sopracciglia",
+  "special_instructions": ""
+}]

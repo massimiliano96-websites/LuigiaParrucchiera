@@ -131,9 +131,50 @@ body {
 /** END HOMEPAGE **/
 
 /** SERVICES PAGE **/
+
+#main-content h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 6vw;
+    text-decoration: underline;
+}
+
+#main-content #services-subtitle {
+    font-family: 'Sacramento', cursive;
+    font-size: 3vw;
+    margin-bottom: 20px;
+}
+
 .background-image {
-    opacity: 0.3;
-    margin: auto;
+    position: relative;
+}
+
+.background-image img{
+    width:100%;
+    height:auto;
+}
+
+.background-image .row {
+    opacity: 0.4;
+    position:absolute;
+    border: 2px solid #e7e2de;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right:0;
+    width: 90%;
+    height: 90%;
+    z-index: 100;
+    overflow: hidden;
+    margin: 0 auto 15px;
+
+}
+.category-tile {
+    position: relative;
+
+
+    width: 200px;
+    height: 200px;
+
 }
 
 /** END SERVICES PAGE **/
