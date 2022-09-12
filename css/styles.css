@@ -13,7 +13,7 @@ body {
 }
 
 #logo-img {
-	/*background: url('../images/symbol-150.jpeg') no-repeat;*/
+	background: url('../images/symbol-150.png') no-repeat;
 	width: 150px;
 	height: 150px;
 	margin: 10px 15px 10px 0px;
@@ -131,51 +131,39 @@ body {
 /** END HOMEPAGE **/
 
 /** SERVICES PAGE **/
-
-#main-content h2 {
-    font-family: 'Sacramento', cursive;
-    font-size: 6vw;
-    text-decoration: underline;
+.img-responsive {
+    opacity: 0.3;
+    margin: auto;
 }
 
-#main-content #services-subtitle {
-    font-family: 'Sacramento', cursive;
-    font-size: 3vw;
-    margin-bottom: 20px;
+#main-content {
+    postion: relative;
 }
 
-.background-image {
-    position: relative;
+.container .content {
+    position: absolute;
+    color: #fff;
+    width: 40%; /* Full width */
+    padding: 20px; /* Some padding */
+    background-color: #44220D;
+    opacity: 0.6;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    align-items: start;
+    justify-content: space-between;
+    bottom: 0;
 }
 
-.background-image img{
-    width:100%;
-    height:auto;
+
+.container .content .men {
+    float: right;
+    top: 100px;
+}
+.container .content .women {
+    float: left;
+    bottom:100px
 }
 
-.background-image .row {
-    opacity: 0.4;
-    position:absolute;
-    border: 2px solid #e7e2de;
-    top: 0;
-    bottom:0;
-    left: 0;
-    right:0;
-    width: 90%;
-    height: 90%;
-    z-index: 100;
-    overflow: hidden;
-    margin: 0 auto 15px;
-
-}
-.category-tile {
-    position: relative;
-
-
-    width: 200px;
-    height: 200px;
-
-}
 
 /** END SERVICES PAGE **/
 
@@ -225,7 +213,7 @@ body {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
   #logo-img {
-    background: url('../images/symbol-100.jpeg') no-repeat;
+    background: url('../images/symbol-100.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
