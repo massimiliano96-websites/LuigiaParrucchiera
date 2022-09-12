@@ -13,7 +13,7 @@ body {
 }
 
 #logo-img {
-	/*background: url('../images/symbol-150.jpeg') no-repeat;*/
+	background: url('../images/symbol-150.png') no-repeat;
 	width: 150px;
 	height: 150px;
 	margin: 10px 15px 10px 0px;
@@ -131,10 +131,39 @@ body {
 /** END HOMEPAGE **/
 
 /** SERVICES PAGE **/
-.background-image {
+.img-responsive {
     opacity: 0.3;
     margin: auto;
 }
+
+#main-content {
+    postion: relative;
+}
+
+.container .content {
+    position: absolute;
+    color: #fff;
+    width: 40%; /* Full width */
+    padding: 20px; /* Some padding */
+    background-color: #44220D;
+    opacity: 0.6;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    align-items: start;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+
+.container .content .men {
+    float: right;
+    top: 100px;
+}
+.container .content .women {
+    float: left;
+    bottom:100px
+}
+
 
 /** END SERVICES PAGE **/
 
@@ -184,7 +213,7 @@ body {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
   #logo-img {
-    background: url('../images/symbol-100.jpeg') no-repeat;
+    background: url('../images/symbol-100.png') no-repeat;
     width: 100px;
     height: 100px;
     margin: 5px 5px 5px 0;
