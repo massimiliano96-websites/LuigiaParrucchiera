@@ -81,7 +81,7 @@ $(function () {
     //Using categories data and snippets html build services view HTML to be inserted into page
     function buildServicesVienHtml(services, servicesTitleHtml, serviceHtml){
         let finalHtml = servicesTitleHtml;
-        finalHtml += "<div class=\"background-image img-responsive\"><img src=\"images/logo_transparent.png\">"
+        finalHtml += "<div class=\"background-image\"><img src=\"images/logo_transparent.png\"class=\"img-responsive\">"
         finalHtml += "<section class='row'>";
 
         //Loop over services
