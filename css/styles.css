@@ -131,39 +131,27 @@ body {
 /** END HOMEPAGE **/
 
 /** SERVICES PAGE **/
-.background-image {
-    postion: relative;
-}
 
-.background-image .row {
-    position: absolute;
-    bottom: 50px;
-    top: 300px;
-    left: 50px;
-    right: 50px;
-}
 
-.background-image .service-tile {
+#main-content .item {
     color: #fff;
     padding: 20px;
     background-color: #44220D;
     border: 2px solid #e7e2de;
-    z-index: 100;
-    opacity: 0.8;
-    margin-bottom: 20px;
+    border-radius: 40px;
 }
 
-.background-image .service-tile img {
-    top:0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    height: 75%;
-    width: 60%;
-
+#main-content .item img {
+    margin: 0 auto 50px;
+    max-height: 70%;
 }
-.background-image .service-tile span {
+
+.service-tile hr {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.service-tile span {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -171,7 +159,18 @@ body {
     text-align: center;
     font-size: 1.6em;
     text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
+
+
+.right{
+    border-radius: 0px 40px 40px 0px;
+}
+.left{
+    border-radius: 40px 0px 0px 40px;
+}
+
 
 /** END SERVICES PAGE **/
 
@@ -272,10 +271,15 @@ body {
     }
 
   /* End Homepage */
+
+  /*Service Page*/
+    #main-content .item span {
+        font-size: 1.4em;
+    }
 }
 
 /********** Extra small devices only **********/
-@media (max-width: 767px) {
+@media (min-width: 500px) and (max-width: 767px ) {
   /* Header */
   .navbar-brand {
     padding-top: 10px;
@@ -317,6 +321,10 @@ body {
   }
 
   /* End Homepage */
+    /*Service Page*/
+    #main-content .item span {
+        font-size: 1.2em;
+    }
 }
 
 /********** Super Extra small devices only **********/
@@ -335,5 +343,10 @@ body {
     .navbar-brand p { /* parrucchiera di fiducia */
         font-size: 0.7em;
         margin-top: 12px;
+    }
+
+    /*Service Page*/
+    #main-content .item span {
+        font-size: 1em;
     }
 }

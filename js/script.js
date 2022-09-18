@@ -22,7 +22,9 @@ $(function () {
     let homeHtml = "snippets/home-snippet.html";
     let allServicesUrl = "data/services.json";
     let servicesTitleHtml = "snippets/services-title-snippet.html";
-    let serviceHtml = "snippets/service-snippet.html";
+    let serviceHtml = "snippets/services-carousel-icon-snippet.html";
+    let servicesIndicatorHtml = "snippets/services-carousel-indicator-snippet.html";
+    let servicesControllerHtml = "snippets/services-carousel-control-snippet.html";
 
     // Convenience function for inserting innerHTML for 'select'
     let insertHtml = function (selector, html) {
@@ -70,8 +72,16 @@ $(function () {
                 $ajaxUtils.sendGetRequest(
                     serviceHtml,
                     function (serviceHtml) {
-                        let servicesViewHtml = buildServicesVienHtml(services, servicesTitleHtml, serviceHtml);
-                        insertHtml("#main-content", servicesViewHtml);
+                        $ajaxUtils.sendGetRequest(servicesIndicatorHtml,
+                        function (servicesIndicatorHtml) {
+                            $ajaxUtils.sendGetRequest(servicesControllerHtml,
+                                function (servicesControllerHtml) {
+                                    let servicesViewHtml = buildServicesVienHtml(services, servicesTitleHtml, serviceHtml, servicesIndicatorHtml, servicesControllerHtml);
+                                    insertHtml("#main-content", servicesViewHtml);
+                                },
+                                false);
+                        },
+                            false);
                     },
                     false);
                 },
@@ -79,26 +89,46 @@ $(function () {
     }
 
     //Using categories data and snippets html build services view HTML to be inserted into page
-    function buildServicesVienHtml(services, servicesTitleHtml, serviceHtml){
+    function buildServicesVienHtml(services, servicesTitleHtml, serviceHtml, servicesIndicatorHtml, servicesControllerHtml){
         let finalHtml = servicesTitleHtml;
-        finalHtml += "<div class=\"background-image\"><img src=\"images/logo_transparent.png\"class=\"img-responsive\">"
-        finalHtml += "<section class='row'>";
+        //finalHtml += "<div class=\"background-image\"><img src=\"images/logo_transparent.png\"class=\"img-responsive\">"
+        finalHtml += "<div id=\"services-carousel\" class=\"carousel slide\" data-ride=\"carousel\">"
+        //finalHtml += "<section class='row'>";
 
+        finalHtml += "<ol class=\"carousel-indicators\">"
+        finalHtml += "<li data-target=\"#services-carousel\" data-slide-to=\"{{slideNumber}}\" class=\"active\"></li>"
+        //Loop over services
+        for(let i = 1; i < services.length; i++) {
+            //Insert service values
+            let html = servicesIndicatorHtml;
+            let slideNumber = i.toString();
+            html = insertProperty(html, "slideNumber", slideNumber);
+            finalHtml += html;
+        }
+        finalHtml += "    </ol><div class=\"carousel-inner\" role=\"listbox\">"
         //Loop over services
         for(let i = 0; i < services.length; i++) {
             //Insert service values
             let html = serviceHtml;
             let name = "" + services[i].name;
             let short_name = services[i].short_name;
+            if (i == 0) {
+                html = insertProperty(html, "status", "active");
+            }else {
+                html = insertProperty(html, "status", "");
+            }
+
             html = insertProperty(html, "name", name);
             html = insertProperty(html, "short_name", short_name);
             finalHtml += html;
         }
+        let html = "</div>" + servicesControllerHtml + "</div>";
 
-        finalHtml += "</section></div>"
+        finalHtml += html
         return finalHtml;
     }
 
     global.$lp = lp;
 
 })(window);
+
