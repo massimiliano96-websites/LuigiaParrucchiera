@@ -132,23 +132,34 @@ body {
 
 /** SERVICES PAGE **/
 
+#main-content #services-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 3.5em;
+}
+
+#main-content #services-subtitle {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.0em;
+    margin-bottom: 15px;
+}
 
 #main-content .item {
     color: #fff;
     padding: 20px;
     background-color: #44220D;
+    opacity: 0.95;
     border: 2px solid #e7e2de;
     border-radius: 40px;
 }
 
-#main-content .item img {
-    margin: 0 auto 50px;
+#main-content .item .img-responsive {
+    margin: 0 auto 75px;
     max-height: 70%;
 }
 
 .service-tile hr {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .service-tile span {
@@ -163,6 +174,9 @@ body {
     margin-bottom: 30px;
 }
 
+.carousel-control, .service-tile {
+    margin-bottom: 15px;
+}
 
 .right{
     border-radius: 0px 40px 40px 0px;
@@ -174,6 +188,23 @@ body {
 
 /** END SERVICES PAGE **/
 
+/** Contacts Page **/
+
+#main-content #contacts-tiles a{
+    color: #44220D;
+}
+
+#main-content #contacts-tiles .contacts-tile{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#main-content #contacts-tiles a i:hover {
+
+}
+
+/** End Contacts page **/
 
 /* FOOTER */
 .panel-footer {

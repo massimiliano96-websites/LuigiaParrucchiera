@@ -25,6 +25,8 @@ $(function () {
     let serviceHtml = "snippets/services-carousel-icon-snippet.html";
     let servicesIndicatorHtml = "snippets/services-carousel-indicator-snippet.html";
     let servicesControllerHtml = "snippets/services-carousel-control-snippet.html";
+    let contactsHtml = "snippets/contacts-snippet.html";
+
 
     // Convenience function for inserting innerHTML for 'select'
     let insertHtml = function (selector, html) {
@@ -91,12 +93,10 @@ $(function () {
     //Using categories data and snippets html build services view HTML to be inserted into page
     function buildServicesVienHtml(services, servicesTitleHtml, serviceHtml, servicesIndicatorHtml, servicesControllerHtml){
         let finalHtml = servicesTitleHtml;
-        //finalHtml += "<div class=\"background-image\"><img src=\"images/logo_transparent.png\"class=\"img-responsive\">"
         finalHtml += "<div id=\"services-carousel\" class=\"carousel slide\" data-ride=\"carousel\">"
-        //finalHtml += "<section class='row'>";
 
         finalHtml += "<ol class=\"carousel-indicators\">"
-        finalHtml += "<li data-target=\"#services-carousel\" data-slide-to=\"{{slideNumber}}\" class=\"active\"></li>"
+        finalHtml += "<li data-target=\"#services-carousel\" data-slide-to=0 class=\"active\"></li>"
         //Loop over services
         for(let i = 1; i < services.length; i++) {
             //Insert service values
@@ -126,6 +126,16 @@ $(function () {
 
         finalHtml += html
         return finalHtml;
+    }
+
+    lp.loadContacts = function ()  {
+        showLoading("#main-content");
+        $ajaxUtils.sendGetRequest(
+            contactsHtml,
+            function (responseText) {
+                document.querySelector("#main-content").innerHTML = responseText;
+            },
+            false);
     }
 
     global.$lp = lp;
