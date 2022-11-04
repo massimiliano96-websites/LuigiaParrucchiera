@@ -134,12 +134,12 @@ body {
 
 #main-content #services-title {
     font-family: 'Sacramento', cursive;
-    font-size: 3.5em;
+    font-size: 10vw;
 }
 
 #main-content #services-subtitle {
     font-family: 'Sacramento', cursive;
-    font-size: 2.0em;
+    font-size: 7vw;
     margin-bottom: 15px;
 }
 
@@ -195,13 +195,16 @@ body {
 }
 
 #main-content #contacts-tiles .contacts-tile{
-    font-size: 2em;
+    font-size: 5vw;
     text-align: center;
     margin-top: 100px;
 }
 
-#main-content #contacts-tiles a i:hover {
-
+#main-content #contacts-tiles .contacts-tile a .fa-whatsapp {
+    box-shadow: 0 0 10px #44220D;
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
 }
 
 /** End Contacts page **/
@@ -245,6 +248,23 @@ body {
 		background: url('../images/jumbotron-1200.jpeg');
 		height: 800px;
 	}
+
+    #main-content #services-title {
+        font-size: 6vw;
+    }
+
+    #main-content #services-subtitle {
+        font-size: 2.5vw;
+    }
+
+    #main-content #contacts-tiles .contacts-tile{
+        font-size: 2vw;
+    }
+
+    #main-content #contacts-tiles .contacts-tile a .fa-whatsapp {
+        width: 3vw;
+        height: 3vw;
+    }
 }
 
 /********** Medium devices only **********/
@@ -380,4 +400,8 @@ body {
     #main-content .item span {
         font-size: 1em;
     }
+}
+
+#main-content #contacts-tiles .contacts-tile{
+    margin-top: 10px;
 }
